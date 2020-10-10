@@ -1,0 +1,37 @@
+*, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    
+    font-family: Poppins, sans-serif;
+}
+
+:root {
+    --primary-color: #282a36;
+    --primary-color-light: #44475a;
+    --primary-color-light-dark: #1f1f25;
+    --primary-color-dark: #121216;
+    --secondary-color: #AAA;
+    --color-cyan: #8be9fd;
+    --color-green: #50fa7b;
+    --color-red: #ff5555;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 256px auto;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+        "menu canva"
+    ;
+}
+
+.separator {
+    height: 2px;
+    width: 150px;
+    /* background-color: var(--primary-color-light); */
+    background-color: red;
+    opacity: 0.6;
+}

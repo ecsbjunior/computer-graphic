@@ -1,0 +1,25 @@
+#menu {
+    grid-area: menu;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 256px;
+    height: 100vh;
+    overflow-y: scroll;
+
+    background-color: var(--primary-color-dark);
+}
+
+#menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+#menu::-webkit-scrollbar-track {
+    background-color: var(--primary-color-dark);
+}
+
+#menu::-webkit-scrollbar-thumb {
+    background-color: var(--color-cyan);
+}

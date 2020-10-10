@@ -1,0 +1,10 @@
+#canvas-container {
+    grid-area: canva;
+    background-color: var(--primary-color);
+}
+
+#canvas-container canvas {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}

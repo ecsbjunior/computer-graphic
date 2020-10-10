@@ -1,0 +1,64 @@
+#options-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas: 
+        "title"
+        "options"
+    ;
+    align-items: center;
+    justify-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#options-container h1 {
+    grid-area: title;
+    color: var(--color-cyan);
+}
+
+#options-container .options-items {
+    grid-area: options;
+}
+
+#options-container .options-items .options-item {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#options-container .options-items .options-item label {
+    margin-top: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+#options-container .options-items .options-item input[type="number"] {
+    width: 50px;
+    height: 20px;
+}
+
+#options-container .options-items .options-item button {
+    width: 120px;
+    height: 20px;
+    border-radius: 5px;
+
+    margin-top: 8px;
+    color: var(--secondary-color);
+    box-shadow: 0 0 0 1px var(--color-green);
+    font-weight: bolder;
+    font-size: 12px;
+    background-color: var(--primary-color-light-dark);
+
+    transition: background-color 0.4s;
+}
+
+#options-container .options-items .options-item button:hover {
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+}
+
+#options-container .options-items .options-item .input-group {
+    color: var(--secondary-color)
+}

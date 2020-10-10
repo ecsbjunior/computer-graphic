@@ -1,0 +1,22 @@
+.menu-subitems {
+    grid-area: subitems;
+}
+
+.menu-subitems:last-child {
+    margin-bottom: 4px;
+}
+
+.menu-subitems .menu-subitem {
+    width: 130px;
+    border-radius: 10px;
+    margin: 4px 0;
+    transition: background-color 0.5s ease-out;
+}
+
+.menu-subitems .menu-subitem:hover {
+    background-color: var(--primary-color-light);
+}
+
+.menu-subitems .menu-subitem p {
+    text-align: center;
+}

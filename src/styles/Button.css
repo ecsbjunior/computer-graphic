@@ -1,0 +1,19 @@
+.button-style {
+    width: 160px;
+    min-height: 40px;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: 16px;
+
+    color: var(--secondary-color);
+    box-shadow: 0 0 0 1px var(--color-green);
+    font-weight: bolder;
+    background-color: var(--primary-color-light-dark);
+
+    transition: background-color 0.4s;
+}
+
+.button-style:hover {
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+.menu-item {
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-template-rows: 40px auto;
+    grid-template-areas:
+        "icon name"
+        "subitems subitems"
+    ;
+    align-items: center;
+    justify-items: center;
+
+    margin: 8px 0;
+    width: 160px;
+    
+    background-color: var(--primary-color-light-dark);
+    border-radius: 10px;
+
+    transition: background-color 0.3s ease-in-out;  
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+.menu-item i {
+    grid-area: icon;
+
+    color: var(--color-green);
+    font-size: 20px;
+}
+
+.menu-item p {
+    grid-area: name;
+    justify-self: flex-start;
+
+    color: var(--secondary-color);
+    font-weight: bolder;
+    font-size: 15px;
+}  
+
+.selected {
+    background-color: var(--primary-color-light)!important;
+}
+
+.select-style {
+    width: 160px;
+    min-height: 80px;
+    margin-top: 8px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color-light-dark);
+    text-align: center;
+}
+
+.select-style option:checked {
+    background: var(--primary-color-dark) linear-gradient(0deg, var(--primary-color-light) 0%, var(--primary-color-light) 100%);
+}
+
+.select-style::-webkit-scrollbar {
+    width: 4px;
+}
+
+.select-style::-webkit-scrollbar-track {
+    background-color: var(--primary-color-dark);
+}
+
+.select-style::-webkit-scrollbar-thumb {
+    background-color: var(--color-cyan);
+}
+
+.input-color-style {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

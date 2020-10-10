@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Computer Graphic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+        <link rel="stylesheet" href="styles/GlobalStyles.css">
+        <link rel="stylesheet" href="styles/Menu.css">
+        <link rel="stylesheet" href="styles/MenuItem.css">
+        <link rel="stylesheet" href="styles/MenuSubItem.css">
+        <link rel="stylesheet" href="styles/Options.css">
+        <link rel="stylesheet" href="styles/Canvas.css">
+        <link rel="stylesheet" href="styles/Info.css">
+        <link rel="stylesheet" href="styles/ViewPort.css">
+        <link rel="stylesheet" href="styles/Button.css">
+    </head>
+    <body>
+        <div id="menu">
+            <div class="menu-item">
+                <i class="far fa-hand-pointer"></i>
+                <p>Select</p>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-tint"></i>
+                <p>Tint</p>
+
+                <div class="menu-subitems">
+                    <div class="menu-subitem">
+                        <p>Flood Fill</p>
+                    </div>
+                    <div class="menu-subitem">
+                        <p>Scan Line</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-grip-lines"></i>
+                <p>Line</p>
+
+                <div class="menu-subitems">
+                    <div class="menu-subitem">
+                        <p>Equation</p>
+                    </div>
+                    <div class="menu-subitem">
+                        <p>DDA</p>
+                    </div>
+                    <div class="menu-subitem">
+                        <p>Mid Point</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <i class="far fa-circle"></i>
+                <p>Circle</p>
+
+                <div class="menu-subitems">
+                    <div class="menu-subitem">
+                        <p>Equation</p>
+                    </div>
+                    <div class="menu-subitem">
+                        <p>Trigonometry</p>
+                    </div>
+                    <div class="menu-subitem">
+                        <p>Mid Point</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <i class="far fa-circle"></i>
+                <p>Elipse</p>
+
+                <div class="menu-subitems">
+                    <div class="menu-subitem">
+                        <p>Mid Point</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-draw-polygon"></i>
+                <p>Polygon</p>
+            </div>
+            <select class="select-style" id="mult-select" multiple></select>
+            <select class="select-style" id="mult-select-points" multiple></select>
+            <input type="color" class="input-color-style" id="input-color">
+            <button id="swap-button" class="button-style">Transformations</button>
+        </div>
+        
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <div id="info">
+            <div class="info-arrow">
+                <i class="fas fa-angle-left fa-lg"></i>
+            </div>
+            <div id="info-container">
+                <div id="view-port">
+                    <h1>View Port</h1>
+                    <div class="form-container">
+                        <div class="form-item">
+                            <label for="width">Width</label>
+                            <br/>
+                            <input type="number" value="1" id="view-input-width" name="width">
+                        </div>
+                        <div class="form-item">
+                            <label for="height">Height</label>
+                            <br/>
+                            <input type="number" value="1" id="view-input-height" name="height">
+                        </div>
+
+                        <button class="option-item" id="view-button">Aplicar</button>
+                    </div>
+                    <div class="view-canvas">
+                        <canvas id="view-port-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div id="options-container">
+                    <h1>Transformations</h1>
+                    <div class="options-items">
+                        <div class="options-item">
+                            <label for="scale">Scale</label>
+                            <div class="input-group">
+                                X: <input type="number" value="1" id="scale-x">
+                                Y: <input type="number" value="1" id="scale-y">
+                            </div>
+                            <button id="button-scale">Apply Scale</button>
+                        </div>
+
+                        <div class="options-item">
+                            <label for="scale">Translation</label>
+                            <div class="input-group">
+                                X: <input type="number" value="0" id="translation-x">
+                                Y: <input type="number" value="0" id="translation-y">
+                            </div>
+                            <button id="button-translation">Apply Translation</button>
+                        </div>
+
+                        <div class="options-item">
+                            <label for="scale">Shear</label>
+                            <div class="input-group">
+                                X: <input type="number" value="0" id="shear-x">
+                                Y: <input type="number" value="0" id="shear-y">
+                            </div>
+                            <button id="button-shear">Apply Shear</button>
+                        </div>
+
+                        <div class="options-item">
+                            <label for="scale">Rotation</label>
+                            <div class="input-group">
+                                &alpha; <input type="number" value="0" id="rotation-degrees">
+                            </div>
+                            <button id="button-rotation">Apply Rotation</button>
+                        </div>
+
+                        <div class="options-item">
+                            <label for="scale">Mirror</label>
+                            <div class="input-group">
+                                <input type="checkbox" id="mirror-vertical"> Vertical
+                                <input type="checkbox" id="mirror-horizontal"> Horizontal
+                            </div>
+                            <button id="button-mirror">Apply Mirror</button>
+                        </div>
+
+                        <div class="options-item">
+                            <label for="scale">Relation</label>
+                            <div class="input-group">
+                                <input type="radio" id="relation-center" name="relation" checked> Center
+                                <input type="radio" id="relation-source" name="relation"> Source
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./scripts/Main.js" type="module"></script>
+    </body>
+</html>
